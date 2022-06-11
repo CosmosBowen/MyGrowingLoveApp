@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00FFFFFF</color>
+    <color name="colorPrimaryDark">#00FFFFFF</color>
+    <color name="colorAccent">#FFC907</color>
+    <color name="theme">#FFC907</color>
+    <color name="add">#FB8C00</color>
+    <color name="empty">#ABACAC</color>
+    <color name="travel">#F892B5</color>
+    <color name="home">#7BD1F8</color>
+    <color name="visit">#B3E47A</color>
+    <color name="aboard">#FFEB3F</color>
+    <color name="pets">#7581BF</color>
+<!--    <color name="c1">#C4A0CA</color>-->
+<!--    <color name="c2">#26A69A</color>-->
+<!--    <color name="c3">#E66F7C</color>-->
+<!--    <color name="c4">#D4E157</color>-->
+<!--    <color name="c5">#FAC374</color>-->
+<!--    <color name="c6">#EA231F</color>-->
+<!--    <color name="c7">#C561EA</color>-->
+<!--    <color name="c8">#68C3CF</color>-->
+<!--    <color name="c9">#64D86A</color>-->
+<!--    <color name="c10">#BD7A18</color>-->
+<!--    <color name="c11">#30649C</color>-->
+<!--    <color name="c12">#66A626</color>-->
+<!--    <color name="c13">#BC7F86</color>-->
+<!--    <color name="c14">#FF5722</color>-->
+<!--    <color name="c15">#EAA5DB</color>-->
+<!--    <color name="c16">#80EDEA</color>-->
+<!--    <color name="c17">#FFE017</color>-->
+<!--    <color name="c18">#FFA726</color>-->
+<!--    <color name="c19">#4EA0F8</color>-->
+<!--    <color name="c20">#7AED07</color>-->
+<!--    <color name="c21">#16CAF8</color>-->
+<!--    <color name="c22">#0DA16E</color>-->
+<!--    <color name="c23">#FA52BC</color>-->
+<!--    <color name="c24">#776852</color>-->
+<!--    <color name="c25">#FFC107</color>-->
+
+</resources>

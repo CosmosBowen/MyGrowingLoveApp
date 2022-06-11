@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/travel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".labelTest">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dayNumber"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="left"
+        android:minWidth="160dp"
+        style="@style/MyCardStyle">
+        <com.example.lbwapp.MyTextView
+            android:id="@+id/dayNumber_card"
+            android:text="📆 Today"
+            style="@style/MyTextViewStyle"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/label"
+        android:layout_below="@id/dayNumber"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="left"
+        android:minWidth="160dp"
+        style="@style/MyCardStyle">
+        <com.example.lbwapp.MyTextView
+            android:id="@+id/label_card"
+            android:layout_marginVertical="25dp"
+            android:text="@string/CardIcon_Label"
+            android:maxLines="1"
+            style="@style/MyTextViewStyle"/>
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="1dp"
+            app:cardCornerRadius="10dp">
+            <ImageView
+                android:id="@+id/label_color_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/home" />
+            <com.example.lbwapp.MyTextView
+                android:id="@+id/label_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="visit"
+                android:textColor="#ffffff"
+                android:textSize="17sp" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/labelCardViewContainer"
+        android:layout_below="@id/label"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="#fff"
+        style="@style/MyCardStyle"/>
+    <Button
+        android:id="@+id/back"
+        android:text="back"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/labelCardView"-->
+<!--        android:layout_below="@id/label"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        app:cardBackgroundColor="#66FFC909"-->
+<!--        style="@style/MyCardStyle">-->
+<!--        <RadioGroup-->
+<!--            android:layout_below="@id/label"-->
+<!--            android:padding="20dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <com.example.lbwapp.MyRadioButton-->
+<!--                android:id="@+id/radioButton_travel"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/travel"-->
+<!--                android:onClick="onRadioButtonClicked"/>-->
+<!--            <com.example.lbwapp.MyRadioButton-->
+<!--                android:id="@+id/radioButton_home"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/home"-->
+<!--                android:onClick="onRadioButtonClicked"/>-->
+<!--            <com.example.lbwapp.MyRadioButton-->
+<!--                android:id="@+id/radioButton_aboard"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/aboard"-->
+<!--                android:onClick="onRadioButtonClicked"/>-->
+<!--            <RadioButton-->
+<!--                android:id="@+id/radioButton_visit"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/visit"-->
+<!--                android:onClick="onRadioButtonClicked"/>-->
+<!--        </RadioGroup>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+
+</RelativeLayout>

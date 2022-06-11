@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyRadioButtonTest">
+<!--    <TextView-->
+<!--        android:layout_margin="40dp"-->
+<!--        android:text="@string/travel"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/dashed_border"/>-->
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+<!--    <com.example.lbwapp.MyRadioGroup-->
+<!--        android:id="@+id/radioGroup"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content">-->
+<!--&lt;!&ndash;        <RadioButton&ndash;&gt;-->
+<!--&lt;!&ndash;            android:alpha="0.2"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:button="@null"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/radioButton_home"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_margin="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="家庭日记"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@color/home"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:onClick="onRadioButtonClicked"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <RadioButton&ndash;&gt;-->
+<!--&lt;!&ndash;            android:alpha="0.2"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/radioButton_aboard"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_margin="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="出国"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@color/aboard"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:onClick="onRadioButtonClicked"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <RadioButton&ndash;&gt;-->
+<!--&lt;!&ndash;            android:alpha="0.2"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/radioButton_visit"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_margin="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="探亲"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@color/visit"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:onClick="onRadioButtonClicked"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <RadioButton&ndash;&gt;-->
+<!--&lt;!&ndash;            android:alpha="0.2"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/radioButton_travel"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_margin="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="旅游"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@color/travel"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:onClick="onRadioButtonClicked"/>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;        <include layout="@layout/my_radio_button"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <include layout="@layout/my_radio_button"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <include layout="@layout/my_radio_button"/>&ndash;&gt;-->
+
+
+<!--        <com.example.lbwapp.MyRadioButton-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:myTextView="@string/aboard"-->
+<!--            app:imageView="@color/aboard"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--        <com.example.lbwapp.MyRadioButton-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:myTextView="@string/home"-->
+<!--            app:imageView="@color/home"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--        <com.example.lbwapp.MyRadioButton-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:myTextView="@string/visit"-->
+<!--            app:imageView="@color/visit"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--        <com.example.lbwapp.MyRadioButton-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:myTextView="@string/travel"-->
+<!--            app:imageView="@color/travel"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </com.example.lbwapp.MyRadioGroup>-->
+
+
+
+
+</LinearLayout>

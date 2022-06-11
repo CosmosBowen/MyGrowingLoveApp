@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/travel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".calendarTest">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <Button
+        android:id="@+id/btn_expand"
+        android:text="expand"
+        android:layout_width="320dp"
+        android:layout_height="40dp"/>
+    <Button
+        android:id="@+id/btn_shink"
+        android:text="shrink"
+        android:layout_width="320dp"
+        android:layout_height="40dp"/>
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EnableCalendar"
+        android:textSize="18dp"/>
+    <TextView
+        android:id="@+id/testShow"
+        android:text="isDateEdited: "
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+<!--    <CalendarView-->
+<!--        android:id="@+id/calendarView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="340dp">-->
+
+<!--    </CalendarView>-->
+<!--    <com.haibin.calendarview.CalendarLayout-->
+<!--        android:id="@+id/calendarLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="330dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:background="#AEFFE57F"-->
+<!--        app:default_status="shrink">-->
+<!--        <com.haibin.calendarview.CalendarView-->
+<!--            android:id="@+id/calendarView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </com.haibin.calendarview.CalendarLayout>-->
+
+    <LinearLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme"
+        android:layout_marginTop="30dp"
+        android:alpha="0.7"
+        android:orientation="vertical"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dayNumber"
+        android:layout_below="@id/text"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="left"
+        android:minWidth="160dp"
+        style="@style/MyCardStyle">
+        <com.example.lbwapp.MyTextView
+            android:id="@+id/dayNumber_card"
+            android:text="📆 今天"
+            style="@style/MyTextViewStyle"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tv_getDate"
+        android:textSize="23dp"
+        android:text="getDate()"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+
+</LinearLayout>

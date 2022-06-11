@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">成长相册</string>
+    <string name="empty">empty</string>
+    <string name="add">+</string>
+    <string name="CardIcon_Label">🍭  </string>
+    <string name="travel">旅行</string>
+    <string name="home">家庭日记</string>
+    <string name="visit">探亲</string>
+    <string name="aboard">出国</string>
+    <string name="defaultLocation">无地点</string>
+    <string name="defaultCountryCodeToBeFilled">无名国</string>
+    <string name="defaultTitle">标题</string>
+    <string name="defaultDescription">描述</string>
+    <string name="loveEnding">冷博雯制作\n送给我亲爱的妹妹\n小丫丫🐣\n\nCopyright @ JoanneLeng</string>
+    <string name="title_activity_calendar_test">calendarTest</string>
+
+    <string name="oneWeek">一周</string>
+    <string name="oneMonth">一个月</string>
+    <string name="oneYear">一年</string>
+    <string name="overOneYear">更久...</string>
+
+<!--    <string name="DefaultLocationText"> , , </string>-->
+
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_label_test">labelTest</string>
+    <string name="title_activity_my_radio_button_test">MyRadioButtonTest</string>
+    <string name="title_activity_floating_button_test">FloatingButtonTest</string>
+    <string name="title_activity_flex_box_test">FlexBoxTest</string>
+    <string name="title_activity_sort">Sort</string>
+    <string name="title_activity_location_test">LocationTest</string>
+
+    <string name="travelColor">#F892B5</string>
+    <string name="homeColor">#7BD1F8</string>
+    <string name="visitColor">#B3E47A</string>
+    <string name="aboardColor">#FFEB3F</string>
+    <string name="petsColor">#7581BF</string>
+    <string name="c1">#C4A0CA</string>
+    <string name="c2">#26A69A</string>
+    <string name="c3">#E66F7C</string>
+    <string name="c4">#D4E157</string>
+    <string name="c5">#FAC374</string>
+    <string name="c6">#EA231F</string>
+    <string name="c7">#C561EA</string>
+    <string name="c8">#68C3CF</string>
+    <string name="c9">#64D86A</string>
+    <string name="c10">#BD7A18</string>
+    <string name="c11">#30649C</string>
+    <string name="c12">#66A626</string>
+    <string name="c13">#BC7F86</string>
+    <string name="c14">#FF5722</string>
+    <string name="c15">#EAA5DB</string>
+    <string name="c16">#80EDEA</string>
+    <string name="c17">#FFE017</string>
+    <string name="c18">#FFA726</string>
+    <string name="c19">#4EA0F8</string>
+    <string name="c20">#7AED07</string>
+    <string name="c21">#16CAF8</string>
+    <string name="c22">#0DA16E</string>
+    <string name="c23">#FA52BC</string>
+    <string name="c24">#776852</string>
+    <string name="c25">#FFC107</string>
+    <string name="title_activity_show_each_tag_collection">ShowEachTagCollection</string>
+</resources>

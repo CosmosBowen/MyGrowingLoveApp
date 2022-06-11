@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+<!--    <com.example.lbwapp.MaskImageView-->
+<!--        android:id="@+id/blur"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:maxHeight="600dp"-->
+<!--        android:background="#F4E8CC"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/bg" />-->
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tagCollection"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+<!--        <LinearLayout-->
+<!--            android:orientation="vertical"-->
+<!--            android:id="@+id/tagCollection"-->
+<!--            android:clickable="false"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/eachTagName"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textSize="30dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:background="#3359EDED"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="empty"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="80dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginRight="150dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <androidx.cardview.widget.CardView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/eachTagGroup"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_below="@id/eachTagName"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginRight="36dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginBottom="80dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:cardBackgroundColor="#fff"&ndash;&gt;-->
+<!--&lt;!&ndash;                style="@style/MyCardStyle"/>&ndash;&gt;-->
+
+<!--        </LinearLayout>-->
+
+<!--    </androidx.core.widget.NestedScrollView>-->
+</FrameLayout>

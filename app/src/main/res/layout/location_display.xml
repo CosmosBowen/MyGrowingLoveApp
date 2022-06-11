@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:background="@drawable/gradient_background_another"
+    android:orientation="vertical">
+    <com.example.lbwapp.MyTextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="#fff"
+        android:text="🌎 Location\nSetting "/>
+
+    <com.example.lbwapp.MyTextView
+        android:gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:text="Country"/>
+    <com.example.lbwapp.MyEditText
+        android:id="@+id/CountryName"
+        style="@style/MyEditTextStyle"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:hint="Country Name"
+        android:gravity="left"
+        android:ellipsize="end"
+        android:textSize="20sp" />
+
+    <com.example.lbwapp.MyTextView
+        android:gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:text="AdministrativeArea"/>
+    <com.example.lbwapp.MyEditText
+        android:id="@+id/AdministrativeName"
+        style="@style/MyEditTextStyle"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:hint="Administrative Name"
+        android:gravity="left"
+        android:ellipsize="end"
+        android:textSize="20sp" />
+
+    <com.example.lbwapp.MyTextView
+        android:gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:text="Feature"/>
+    <com.example.lbwapp.MyEditText
+        android:id="@+id/FeatureName"
+        style="@style/MyEditTextStyle"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:hint="Feature Name"
+        android:gravity="left"
+        android:ellipsize="end"
+        android:textSize="20sp" />
+
+
+
+</LinearLayout>

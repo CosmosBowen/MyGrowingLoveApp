@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlexBoxTest">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/recycler_view_flexbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+<!--    <com.google.android.flexbox.FlexboxLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+
+<!--        app:flexWrap="wrap"-->
+<!--        app:flexDirection="row"-->
+
+<!--        app:alignContent="flex_start"-->
+<!--        app:alignItems="flex_start"-->
+<!--        app:justifyContent="space_around"-->
+
+<!--        >-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingLeft="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingRight="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="text1"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="#000"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@color/colorAccent"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingLeft="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingRight="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="text2"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="#000"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@color/home"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="60dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingLeft="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingRight="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="text333333333"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="#000"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@color/aboard"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingLeft="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingRight="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="text4"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="#000"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@color/visit"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="100dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingLeft="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingRight="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="text5"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="#000"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@color/travel"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingLeft="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingRight="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="text6666666666"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="#000"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="#879"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="60dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingLeft="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingRight="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="text7"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="#000"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="#443"/>&ndash;&gt;-->
+<!--    </com.google.android.flexbox.FlexboxLayout>-->
+
+
+
+</LinearLayout>

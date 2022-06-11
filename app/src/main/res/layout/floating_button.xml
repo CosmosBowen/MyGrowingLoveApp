@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ic_back"
+        style="@style/MyFloatingButtonStyle"
+        app:srcCompat="@drawable/ic_back"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ic_place"
+        style="@style/MyFloatingButtonStyle"
+        app:srcCompat="@drawable/ic_place"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ic_label"
+        style="@style/MyFloatingButtonStyle"
+        app:srcCompat="@drawable/ic_label"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ic_day"
+        style="@style/MyFloatingButtonStyle"
+        app:srcCompat="@drawable/ic_day"/>
+</RelativeLayout>

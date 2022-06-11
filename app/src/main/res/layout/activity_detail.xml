@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotoPortrait">
+
+    <com.example.lbwapp.MaskImageView
+        android:id="@+id/blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:maxHeight="600dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/family5" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/parentRelative"
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--title_card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/title"
+                android:layout_marginRight="66dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="80dp"
+                android:minWidth="160dp"
+                style="@style/MyCardStyle">
+                <com.example.lbwapp.MyEditText
+                    android:id="@+id/title_card"
+                    style="@style/MyEditTextStyle"
+                    android:background="@null"
+                    android:layout_marginVertical="25dp"
+                    android:layout_margin="15dp"
+                    android:hint="标题"
+                    android:textSize="35sp" />
+            </androidx.cardview.widget.CardView>
+            <!--鸭子-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/title"
+                android:layout_alignTop="@id/title"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginTop="-40dp"
+                android:alpha="0.9"
+                android:src="@drawable/duck" />
+            <!--黑色text_card  失败-->
+            <!--        <androidx.cardview.widget.CardView-->
+            <!--            android:id="@+id/text"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:minWidth="330dp"-->
+            <!--            android:minHeight="340dp"-->
+            <!--            android:layout_below="@id/title"-->
+            <!--            android:layout_centerHorizontal="true"-->
+            <!--            android:layout_marginTop="20dp"-->
+            <!--            android:alpha="0.4"-->
+            <!--            android:foreground="#000000"-->
+            <!--            app:cardCornerRadius="20dp"-->
+            <!--            app:cardElevation="0dp">-->
+
+            <!--            <com.example.lbwapp.MyTextView-->
+            <!--                android:id="@+id/text_card"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_marginVertical="25dp"-->
+            <!--                android:layout_marginLeft="25dp"-->
+            <!--                android:layout_marginRight="35dp"-->
+            <!--                android:scaleType="centerCrop"-->
+            <!--                android:text="描述"-->
+            <!--                android:textColor="#FFFFFF"-->
+            <!--                android:textSize="20sp" />-->
+            <!--        </androidx.cardview.widget.CardView>-->
+
+            <!--白色text_card  成功-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/text"
+                style="@style/MyCardStyle"
+                android:layout_below="@id/title"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="36dp"
+                android:minWidth="200dp"
+                android:minHeight="150dp">
+
+                <com.example.lbwapp.MyEditText
+                    android:id="@+id/text_card"
+                    style="@style/MyEditTextStyle"
+                    android:layout_margin="15dp"
+                    android:layout_marginVertical="25dp"
+                    android:background="@null"
+                    android:hint="描述"
+                    android:textSize="23sp" />
+            </androidx.cardview.widget.CardView>
+            <!--小熊-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/text"
+                android:layout_alignTop="@id/text"
+                android:layout_marginTop="-55dp"
+                android:layout_marginRight="-40dp"
+                android:alpha="0.8"
+                android:rotation="20"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:src="@drawable/bear" />
+            <!--dayNumber_card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dayNumber"
+                android:layout_below="@id/text"
+                android:layout_marginTop="30dp"
+                android:minWidth="160dp"
+                android:layout_marginRight="110dp"
+                style="@style/MyCardStyle">
+                <com.example.lbwapp.MyTextView
+                    android:layout_marginVertical="25dp"
+                    android:text="📆"
+                    style="@style/MyTextViewStyle" />
+                <com.example.lbwapp.MyTextView
+                    android:id="@+id/dayNumber_card"
+                    android:layout_marginVertical="25dp"
+                    android:paddingLeft="50dp"
+                    android:text="13天前"
+                    style="@style/MyTextViewStyle"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/calendarCardView"
+                android:layout_below="@id/dayNumber"
+                android:layout_marginRight="36dp"
+                android:layout_marginTop="5dp"
+                app:cardBackgroundColor="#66FFC909"
+                style="@style/MyCardStyle">
+            </androidx.cardview.widget.CardView>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/calendarLayout"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/theme"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_alignLeft="@id/dayNumber"-->
+<!--                android:paddingHorizontal="30dp"-->
+<!--                android:layout_below="@id/dayNumber"-->
+<!--                android:alpha="0.7"-->
+<!--                android:orientation="vertical"/>-->
+            <!--        <androidx.cardview.widget.CardView-->
+            <!--            android:id="@+id/day"-->
+            <!--            android:layout_width="160dp"-->
+            <!--            android:layout_height="74dp"-->
+            <!--            android:layout_below="@id/text"-->
+            <!--            android:layout_alignLeft="@id/text"-->
+            <!--            android:layout_marginTop="20dp"-->
+            <!--            android:alpha="0.4"-->
+            <!--            android:foreground="#000000"-->
+            <!--            app:cardCornerRadius="20dp"-->
+            <!--            app:cardElevation="0dp">-->
+
+            <!--            <com.example.lbwapp.MyTextView-->
+            <!--                android:id="@+id/day_card"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_margin="15dp"-->
+            <!--                android:scaleType="centerCrop"-->
+            <!--                android:text="天数"-->
+            <!--                android:textColor="#FFFFFF"-->
+            <!--                android:textSize="20sp" />-->
+            <!--        </androidx.cardview.widget.CardView>-->
+            <!--label_card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/label"
+                android:layout_below="@id/calendarCardView"
+                android:layout_marginTop="20dp"
+                android:minWidth="160dp"
+                android:layout_gravity="left"
+                style="@style/MyCardStyle">
+                <com.example.lbwapp.MyTextView
+                    android:id="@+id/label_card"
+                    android:layout_marginVertical="25dp"
+                    android:text="@string/CardIcon_Label"
+                    android:maxLines="1"
+                    style="@style/MyTextViewStyle"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="1dp"
+                    app:cardCornerRadius="10dp">
+                    <ImageView
+                        android:id="@+id/label_color_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/home" />
+                    <com.example.lbwapp.MyTextView
+                        android:id="@+id/label_text_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginVertical="5dp"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:text="@string/home"
+                        android:textColor="#ffffff"
+                        android:textSize="17sp" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/labelCardViewContainer"
+                android:layout_below="@id/label"
+                android:layout_marginRight="36dp"
+                android:layout_marginTop="5dp"
+                app:cardBackgroundColor="#fff"
+                style="@style/MyCardStyle"/>
+
+            <!--place_card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/location_card"
+                android:layout_below="@id/labelCardViewContainer"
+                android:layout_marginTop="20dp"
+                android:minWidth="50dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="200dp"
+                style="@style/MyCardStyle">
+                <LinearLayout
+                    android:layout_marginVertical="15dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <com.example.lbwapp.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="23sp"
+                            android:textColor="#000"
+                            android:layout_marginRight="15dp"
+                            android:text="🌎" />
+                        <com.example.lbwapp.MyTextView
+                            android:id="@+id/location_card_CountryCode"
+                            android:text="CH"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000"
+                            android:textSize="23sp"/>
+                    </LinearLayout>
+                    <com.example.lbwapp.MyTextView
+                        android:id="@+id/location_card_CountryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:paddingTop="5dp"
+                        android:textColor="#000"
+                        android:textSize="23sp"
+                        android:text="C" />
+                    <com.example.lbwapp.MyTextView
+                        android:id="@+id/location_card_Admin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:paddingTop="5dp"
+                        android:textColor="#000"
+                        android:textSize="23sp"
+                        android:text="A" />
+                    <com.example.lbwapp.MyTextView
+                        android:id="@+id/location_card_Feature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:paddingTop="5dp"
+                        android:textColor="#000"
+                        android:textSize="23sp"
+                        android:text="F" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <!--        <androidx.cardview.widget.CardView-->
+            <!--            android:id="@+id/place"-->
+            <!--            android:layout_width="160dp"-->
+            <!--            android:layout_height="74dp"-->
+            <!--            android:layout_below="@id/label"-->
+            <!--            android:layout_alignLeft="@id/text"-->
+            <!--            android:layout_marginTop="20dp"-->
+            <!--            android:alpha="0.4"-->
+            <!--            android:foreground="#000000"-->
+            <!--            app:cardCornerRadius="20dp"-->
+            <!--            app:cardElevation="0dp">-->
+
+            <!--            <com.example.lbwapp.MyTextView-->
+            <!--                android:id="@+id/place_card"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_margin="15dp"-->
+            <!--                android:scaleType="centerCrop"-->
+            <!--                android:text="地点"-->
+            <!--                android:textColor="#FFFFFF"-->
+            <!--                android:textSize="20sp" />-->
+            <!--        </androidx.cardview.widget.CardView>-->
+            <!--返回-->
+
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/backlong"-->
+<!--                android:layout_width="345dp"-->
+<!--                android:layout_height="84dp"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_alignBottom="@id/text"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginRight="-240dp"-->
+<!--                android:layout_marginBottom="-125dp"-->
+<!--                android:alpha="0.45"-->
+<!--                app:cardCornerRadius="100dp"-->
+<!--                app:cardElevation="10dp"-->
+<!--                app:cardPreventCornerOverlap="true">-->
+<!--                <ImageView-->
+<!--                    android:layout_width="350dp"-->
+<!--                    android:layout_height="88dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/backlong" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/back"-->
+<!--                android:layout_width="86dp"-->
+<!--                android:layout_height="86dp"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_alignBottom="@id/text"-->
+<!--                android:layout_marginRight="23dp"-->
+<!--                android:layout_marginBottom="-125dp"-->
+<!--                app:cardCornerRadius="50dp"-->
+<!--                app:cardElevation="50dp">-->
+<!--                <ImageView-->
+<!--                    android:layout_width="88dp"-->
+<!--                    android:layout_height="88dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:rotation="90"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:alpha="0.9"-->
+<!--                    android:src="@drawable/back" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/backlong"
+            android:layout_width="345dp"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@id/back"
+            android:layout_alignBottom="@id/back"
+            android:layout_marginBottom="13dp"
+            android:layout_marginRight="-240dp"
+            app:cardBackgroundColor="#FFE57F"
+            android:alpha="0.7"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="true">
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/back"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="70dp"
+            app:cardPreventCornerOverlap="true"
+            android:background="@color/theme"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="100dp">
+            <ImageView
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:rotation="0"
+                android:background="@drawable/noteback"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+</FrameLayout>

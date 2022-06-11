@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotoPortrait">
+
+    <com.example.lbwapp.MaskImageView
+        android:id="@+id/blur"
+        android:src="@drawable/family5"
+        android:adjustViewBounds="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxHeight="600dp"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/detail"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp">
+            <androidx.cardview.widget.CardView
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:adjustViewBounds="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <ImageView
+                    android:id="@+id/photo"
+                    android:layout_gravity="center"
+                    android:src="@drawable/family5"
+                    android:adjustViewBounds="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="3000dp"
+                    android:scaleType="fitCenter" />
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignBottom="@id/detail"
+            android:layout_marginBottom="16dp"
+            android:layout_toLeftOf="@id/detail"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="10dp">
+
+            <ImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:rotation="90"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detail"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            app:cardPreventCornerOverlap="true"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/detail" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+</FrameLayout>

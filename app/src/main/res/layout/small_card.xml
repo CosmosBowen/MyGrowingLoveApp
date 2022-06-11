@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp">
+
+    <ImageView
+        android:id="@+id/small_card_image"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/family5" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.example.lbwapp.MyTextView
+            android:id="@+id/small_card_title"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="title"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="100dp"
+            android:textColor="#fff"
+            android:background="#FDD835"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <com.example.lbwapp.MyTextView
+            android:id="@+id/small_card_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="label"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="100dp"
+            android:textColor="#fff"
+            android:background="#00897B"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/cardView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/colorPrimaryDark"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        app:cardElevation="12dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="23dp"-->
+<!--            android:paddingBottom="20dp"-->
+<!--            android:paddingHorizontal="15dp"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="150dp"-->
+<!--                app:cardCornerRadius="10dp">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/small_card_image"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/family5" />-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <com.example.lbwapp.MyTextView-->
+<!--                android:id="@+id/small_card_title"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="公园jasfkjbsvkjb借记卡时间VS可不是V看见你开始BVBHS野炊"-->
+<!--                android:ellipsize="end"-->
+<!--                android:maxLines="1"-->
+<!--                android:maxWidth="100dp"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </LinearLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+</FrameLayout>
