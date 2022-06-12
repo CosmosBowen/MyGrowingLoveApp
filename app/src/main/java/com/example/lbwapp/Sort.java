@@ -132,7 +132,7 @@ public class Sort extends FragmentActivity {
                         closeFloatingMenu(chosenButton);
                         floatingMenuContainer.removeAllViews();
                         //change page
-                        Toast.makeText(mActivityContext,otherButton.getName(),Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(mActivityContext,otherButton.getName(),Toast.LENGTH_SHORT).show();
                         if(otherButton.getName().equals("back")){
                             //应退回到主页，不是finish
                             //因为上个页面除了主页外，还可能是photoPortrait啊，finish就回不到主页了

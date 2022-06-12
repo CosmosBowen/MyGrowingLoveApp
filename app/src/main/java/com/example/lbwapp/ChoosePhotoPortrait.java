@@ -89,13 +89,13 @@ public class ChoosePhotoPortrait extends Activity {
                 if(takenTime!=null){
                     //有初始创建时间
                     takenTime=takenTime.substring(0,10);
-                    Toast.makeText(ChoosePhotoPortrait.this,"有创建时间"+takenTime,Toast.LENGTH_LONG).show();
+//                    Toast.makeText(ChoosePhotoPortrait.this,"有创建时间"+takenTime,Toast.LENGTH_LONG).show();
                 }else {
                     //无初始创建时间，默认为今天，并允许用户从日历选择;
                     String curTime = new SimpleDateFormat("yyyy:MM:dd").format(Calendar.getInstance().getTime());
                     takenTime=curTime;
                     isDateEditable=true;
-                    Toast.makeText(ChoosePhotoPortrait.this,"无创建时间"+takenTime,Toast.LENGTH_LONG).show();
+//                    Toast.makeText(ChoosePhotoPortrait.this,"无创建时间"+takenTime,Toast.LENGTH_LONG).show();
                 }
 
                 //*****拍摄地点*******

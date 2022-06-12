@@ -11,7 +11,7 @@
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/activity_detail.xml" value="0.4" />
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/activity_floating_button_test.xml" value="0.1" />
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/activity_map_test.xml" value="0.1" />
-        <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/activity_photo_list.xml" value="0.6" />
+        <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/activity_photo_list.xml" value="0.176" />
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/activity_show_each_tag_collection.xml" value="0.24094202898550723" />
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/activity_sort.xml" value="0.1" />
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/card_item.xml" value="0.536" />
@@ -22,6 +22,8 @@
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/location_display.xml" value="0.264" />
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/map_fragment.xml" value="0.1064453125" />
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/my_radio_button.xml" value="0.264" />
+        <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/photo_list_recycler_view.xml" value="0.16974043715846995" />
+        <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/photo_list_text_view.xml" value="0.22509057971014493" />
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/small_card.xml" value="0.1" />
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/sort_background.xml" value="0.1" />
         <entry key="..\:/0GrowingLove/LBWApp/app/src/main/res/layout/sort_background_fragment.xml" value="0.1578125" />

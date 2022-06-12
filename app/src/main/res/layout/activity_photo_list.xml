@@ -13,11 +13,33 @@
         android:scaleType="centerCrop"
         android:src="@drawable/bg" />
 
+<!--    <FrameLayout-->
+<!--        android:id="@+id/photoList_fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"/>-->
+    <LinearLayout
+        android:id="@+id/photoList_welcomingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <com.example.lbwapp.MyTextView
+            android:layout_marginTop="250dp"
+            android:textSize="22sp"
+            android:textColor="#FFC107"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/loveEnding_Eng"/>
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
 
 <!--    <androidx.core.widget.NestedScrollView-->
 <!--        android:layout_width="wrap_content"-->

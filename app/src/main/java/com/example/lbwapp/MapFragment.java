@@ -109,6 +109,9 @@ public class MapFragment extends Fragment {
         BaiduMapOptions options = new BaiduMapOptions();
         //不允许地图旋转手势
         options.rotateGesturesEnabled(false);
+
+        //设置语言，好像不行...百度地图，之后用谷歌地图再开发一个...
+
         //允许拖拽手势
 //        options.scrollGesturesEnabled(true);
         //不允许俯视图手势：两指下滑后平面翘起的效果

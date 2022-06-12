@@ -169,6 +169,7 @@ public class MyDeltaDate {
 
         String showText="";
         // Chinese version
+        /*
         if(deltaYears>0){
             showText=deltaYears+"年前";
         }else if (deltaMonths>0){
@@ -179,30 +180,33 @@ public class MyDeltaDate {
             showText="今天";
         }
         return showText;
+
+         */
 //        return showText+"\n间隔:"+"\n(年) "+deltaYears+"\n(月) "+deltaMonths+"\n(日) "+deltaDays;
 
         // English version,以前是需要myDeltaDate.deltaYears，myDeltaDate.deltaMonths，myDeltaDate.deltaDays
-//        if(deltaYears>0){
-//            if(deltaYears>1){
-//                showText=deltaYears+" years ago";
-//            }else {
-//                showText=deltaYears+" year ago";
-//            }
-//        }else if (deltaMonths>0){
-//            if(deltaMonths>1){
-//                showText=deltaMonths+" months ago";
-//            }else {
-//                showText=deltaMonths+" month ago";
-//            }
-//        }else if(deltaDays>0){
-//            if(deltaDays>1){
-//                showText=deltaDays+" days ago";
-//            }else {
-//                showText=deltaDays+" day ago";
-//            }
-//        }else {
-//            showText="Today";
-//        }
+        if(deltaYears>0){
+            if(deltaYears>1){
+                showText=deltaYears+" Years Ago";
+            }else {
+                showText=deltaYears+" Year Ago";
+            }
+        }else if (deltaMonths>0){
+            if(deltaMonths>1){
+                showText=deltaMonths+" Months Ago";
+            }else {
+                showText=deltaMonths+" Month Ago";
+            }
+        }else if(deltaDays>0){
+            if(deltaDays>1){
+                showText=deltaDays+" Days Ago";
+            }else {
+                showText=deltaDays+" Day Ago";
+            }
+        }else {
+            showText="Today";
+        }
+        return showText;
 //        return showText+"\nin between:"+"\n(years)  "+deltaYears+"\n(months) "+deltaMonths+"\n(days)   "+deltaDays;
 
     }

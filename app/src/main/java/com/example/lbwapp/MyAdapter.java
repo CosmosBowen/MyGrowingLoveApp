@@ -123,14 +123,14 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> imp
         //******描述和标题*******
         String title=cardItemEntity.getTitle_card();
         if(title.equals("")){
-            myHolder.title_card.setText("[无标题]");
+            myHolder.title_card.setText(context.getString(R.string.card_NoTitle_Eng));
         }else {
             myHolder.title_card.setText(title);
         }
 //        myHolder.title_card.setText(cardItemEntity.getTitle_card());
         String text=cardItemEntity.getText_card();
         if(text.equals("")){
-            myHolder.text_card.setText("[无描述]");
+            myHolder.text_card.setText(context.getString(R.string.card_NoInfo_Eng));
         }else {
             myHolder.text_card.setText(text);
         }
@@ -182,8 +182,13 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> imp
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder alertBuilder=new AlertDialog.Builder(context);
-                alertBuilder.setMessage("Are you sure to DELETE this photo ?\n\n"
-                        +"\""+String.valueOf(cardItemEntity.getTitle_card())+"\"");
+                String msg= context.getString(R.string.deletePopup_Eng);
+                if(!cardItemEntity.getTitle_card().equals("")){
+                    msg+="\n\n" +"🖼️ "+String.valueOf(cardItemEntity.getTitle_card());
+                }else {
+                    msg+=" 🥰";
+                }
+                alertBuilder.setMessage(msg);
 //                alertBuilder.setMessage("Are you sure to DELETE this photo ?");
                 alertBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override

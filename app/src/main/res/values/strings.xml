@@ -1,23 +1,50 @@
 <resources>
-    <string name="app_name">成长相册</string>
+    <string name="app_name">GrowingLove</string>
+    <string name="app_name_Chi">成长相册</string>
     <string name="empty">empty</string>
     <string name="add">+</string>
     <string name="CardIcon_Label">🍭  </string>
     <string name="travel">旅行</string>
     <string name="home">家庭日记</string>
     <string name="visit">探亲</string>
-    <string name="aboard">出国</string>
+
+    <string name="card_NoTitle_Chi">[无标题]</string>
+    <string name="card_NoInfo_Chi">[无描述]</string>
+    <string name="card_NoTitle_Eng">[no title]</string>
+    <string name="card_NoInfo_Eng">[no description]</string>
+
     <string name="defaultLocation">无地点</string>
     <string name="defaultCountryCodeToBeFilled">无名国</string>
+    <string name="defaultLocation_Eng">Unknown</string>
+    <string name="defaultCountryCodeToBeFilled_Eng">NoCountry</string>
+
     <string name="defaultTitle">标题</string>
     <string name="defaultDescription">描述</string>
+    <string name="defaultTitle_Eng">Title</string>
+    <string name="defaultDescription_Eng">Description</string>
+
+    <string name="exitApp_Chi">再按一次退出程序</string>
+    <string name="exitApp_Eng">gonna exit app when click again</string>
+
+    <string name="deletePopup_Chi">真的要删掉吗?</string>
+    <string name="deletePopup_Eng">Really wanna delete it ?</string>
+
+    <string name="editCalendarPopup_Chi">不允许编辑</string>
+    <string name="editCalendarPopup_Eng">❌ Not allowed to edit</string>
+
     <string name="loveEnding">冷博雯制作\n送给我亲爱的妹妹\n小丫丫🐣\n\nCopyright @ JoanneLeng</string>
+    <string name="loveEnding_Eng">Created By Bowen\nFor My Dear Sister\nLittle YaYa🐣\n\nCopyright @ JoanneLeng</string>
     <string name="title_activity_calendar_test">calendarTest</string>
 
     <string name="oneWeek">一周</string>
     <string name="oneMonth">一个月</string>
     <string name="oneYear">一年</string>
     <string name="overOneYear">更久...</string>
+
+    <string name="oneWeek_Eng">1 Week</string>
+    <string name="oneMonth_Eng">1 Month</string>
+    <string name="oneYear_Eng">1 Year</string>
+    <string name="overOneYear_Eng">Longer</string>
 
 <!--    <string name="DefaultLocationText"> , , </string>-->
 

@@ -1,6 +1,10 @@
 package com.example.lbwapp;
 
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,6 +18,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -32,6 +37,7 @@ public class PhotoList extends Activity {
     public static final String VISIT = "visit";
     public static final String EMPTY = "empty";
 
+    LinearLayout photoList_welcomingText;
     List<CardItemEntity> cardList;
 //    String list_position="";
     MyAdapter myAdpater;
@@ -42,10 +48,23 @@ public class PhotoList extends Activity {
 
     private long exitTime=0;//用来判断程序是否在两次点击的时间间隔中退出程序
 
+//    private void replaceFragment(Fragment fragment){
+//        FragmentManager fragmentManager=getSupportFragmentManager();
+//        FragmentTransaction transaction=fragmentManager.beginTransaction();
+//        transaction.replace(R.id.photoList_fragment,fragment);
+////        transaction.addToBackStack(null);
+//        transaction.commit();
+//    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo_list);
+
+        photoList_welcomingText=findViewById(R.id.photoList_welcomingText);
+        recyclerView = findViewById(R.id.recycler_view);
+
+
 
         MyApplication.getInstance().addActivity(this);
 
@@ -80,9 +99,7 @@ public class PhotoList extends Activity {
 //        TextView title = findViewById(R.id.cardTitle);
 //        title.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/huakang.ttc"));
         //设置滚动视图，在PhotoList里放置自定义的CardView卡片
-        recyclerView = findViewById(R.id.recycler_view);
 
-        getCardData();
         //********************数据库db往cardList动态加载数据********************
 //        SQLiteDatabase db=dbHelper.getWritableDatabase();
 //        Cursor cursor=db.query("PhotoList",null,null,null,null,null,null);
@@ -104,24 +121,37 @@ public class PhotoList extends Activity {
 //        }
 //        cursor.close();
 
-        myAdpater = new MyAdapter(this, cardList);
-        myAdpater.setStateRestorationPolicy(RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY);
-        //new LinearLayoutManager() 参数为上下文环境，实现的是默认的垂直布局
-        layoutManager=new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(myAdpater);
-        myAdpater.setOnItemClickListener(new MyAdapter.OnItemClickListener(){
-            @Override
-            public void onItemClick(View view , int position){
+
+        boolean isNoCard=getCardData();
+        Toast.makeText(this,"isNoCard: "+isNoCard,Toast.LENGTH_SHORT).show();
+        if(isNoCard){
+            //显示文字
+//            replaceFragment(new PhotoList_TextView());
+            photoList_welcomingText.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.INVISIBLE);
+        }else {
+            //显示图片列表
+//            replaceFragment(new PhotoList_RecyclerView());
+            photoList_welcomingText.setVisibility(View.INVISIBLE);
+            recyclerView.setVisibility(View.VISIBLE);
+            myAdpater = new MyAdapter(this, cardList);
+            myAdpater.setStateRestorationPolicy(RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY);
+            //new LinearLayoutManager() 参数为上下文环境，实现的是默认的垂直布局
+            layoutManager=new LinearLayoutManager(this);
+            recyclerView.setLayoutManager(layoutManager);
+            recyclerView.setAdapter(myAdpater);
+            myAdpater.setOnItemClickListener(new MyAdapter.OnItemClickListener(){
+                @Override
+                public void onItemClick(View view , int position){
 
 //                list_position=String.valueOf(position);
-                //全局！
-                MyApplication.STATE=2;
-                MyApplication.position=position;
+                    //全局！
+                    MyApplication.STATE=2;
+                    MyApplication.position=position;
 
-                CardItemEntity cardItem=cardList.get(position);
-                Intent intent=null;
-                //*************判断照片是竖的还是横的（通过比较长宽）*************
+                    CardItemEntity cardItem=cardList.get(position);
+                    Intent intent=null;
+                    //*************判断照片是竖的还是横的（通过比较长宽）*************
 //                BitmapFactory.Options opts = new BitmapFactory.Options();
 //                opts.inJustDecodeBounds = true;
 //                BitmapFactory.decodeResource(getResources(),cardItem.getImage_card() , opts);
@@ -135,25 +165,28 @@ public class PhotoList extends Activity {
 //                    intent=new Intent(PhotoList.this,PhotoPortrait.class);
 //                }
 
-                //***************************Location测试*********************
+                    //***************************Location测试*********************
 //                intent=new Intent(PhotoList.this,LocationTest.class);
-                intent=new Intent(PhotoList.this,PhotoPortrait.class);
-                //***************************Location测试*********************
+                    intent=new Intent(PhotoList.this,PhotoPortrait.class);
+                    //***************************Location测试*********************
 
-                //*************两种方式传item**************
-                //通过Bundle传item
+                    //*************两种方式传item**************
+                    //通过Bundle传item
 //                Bundle bundle=new Bundle();
 //                bundle.putSerializable("CardItemEntity",cardItem);//将CardItemEntity类通过Bundle传递给Detail界面
 //                intent.putExtras(bundle);
 
-                //直接通过intent传item.imagePath
-                //直接拿到该item对象的imagePath
-                intent.putExtra("ImagePath",cardItem.getImagePath_card());
+                    //直接通过intent传item.imagePath
+                    //直接拿到该item对象的imagePath
+                    intent.putExtra("ImagePath",cardItem.getImagePath_card());
 //                intent.putExtra("fromActivity","PhotoList");
 
-                startActivity(intent);
-            }
-        });
+                    startActivity(intent);
+                }
+            });
+        }
+
+
         CardView cardViewAddPhotos=findViewById(R.id.btn_addPhoto);
         cardViewAddPhotos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -166,7 +199,7 @@ public class PhotoList extends Activity {
         cardViewClassifiedPhotos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(PhotoList.this, "yeah", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(PhotoList.this, "yeah", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(PhotoList.this,Sort.class);
                 startActivity(intent);
             }
@@ -323,7 +356,7 @@ public class PhotoList extends Activity {
 
     private void exit() {
         if((System.currentTimeMillis()-exitTime)>2000){
-            Toast.makeText(PhotoList.this,"再按一次退出程序",Toast.LENGTH_SHORT).show();
+            Toast.makeText(PhotoList.this,getString(R.string.exitApp_Eng),Toast.LENGTH_SHORT).show();
             //更新上一次点击返回键的时间
             exitTime=System.currentTimeMillis();
         }else {
@@ -333,7 +366,7 @@ public class PhotoList extends Activity {
         }
     }
 
-    private void getCardData () {
+    private boolean getCardData () {
         cardList = new ArrayList<>();
 
         //模拟从数据库获得的一行行数据项
@@ -455,6 +488,12 @@ public class PhotoList extends Activity {
             }while (cursor.moveToPrevious());//moveToNext
         }
         cursor.close();
+
+        if(cardList.size()==0){
+            return true;
+        }else {
+            return false;
+        }
 
         //另一种放数据的方式
 //        int[] images = new int[]{R.drawable.family1, R.drawable.family2, R.drawable.family3, R.drawable.family4, R.drawable.family5, R.drawable.family6, R.drawable.family7, R.drawable.family8};

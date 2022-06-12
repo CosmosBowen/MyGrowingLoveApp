@@ -139,9 +139,9 @@ public class Detail extends Activity {
         countries=new Countries();
 
         //给三个变量赋初值
-        title=getString(R.string.defaultTitle);
-        description=getString(R.string.defaultDescription);
-        locationCompleteText=getString(R.string.defaultLocation);
+        title=getString(R.string.defaultTitle_Eng);
+        description=getString(R.string.defaultDescription_Eng);
+        locationCompleteText=getString(R.string.defaultLocation_Eng);
 //        String dateTaken="0000:00:00";//今天
 //        int isDateEditableInt=0;
 
@@ -305,7 +305,7 @@ public class Detail extends Activity {
 
                 }else {
 //                    Toast.makeText(Detail.this,"不可编辑📅 ❌",Toast.LENGTH_SHORT).show();
-                    Toast.makeText(Detail.this,"❌ Not allowed to edit",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Detail.this,mActivityContext.getString(R.string.editCalendarPopup_Eng),Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -825,9 +825,9 @@ public class Detail extends Activity {
 
         if(location_CountryName.equals(" ")){
             if(location_Admin.equals(" ")&&location_Feature.equals(" ")){
-                location_CountryCode=getString(R.string.defaultLocation);
+                location_CountryCode=getString(R.string.defaultLocation_Eng);
             }else {
-                location_CountryCode=getString(R.string.defaultCountryCodeToBeFilled);
+                location_CountryCode=getString(R.string.defaultCountryCodeToBeFilled_Eng);
             }
         }else {
             location_CountryCode=countries.getCode(location_CountryName);
