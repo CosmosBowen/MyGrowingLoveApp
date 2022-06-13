@@ -75,7 +75,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_PHOTOLIBRARY);
         db.execSQL(SQL_CREATE_LABELLIBRARY);
-        Toast.makeText(mContext,"new version db create succeeded",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(mContext,"new version db create succeeded",Toast.LENGTH_SHORT).show();
         addInitialLabels(db);
 //        getCardData();
 //        ContentValues values=new ContentValues();
