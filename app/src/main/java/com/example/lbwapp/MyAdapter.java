@@ -123,14 +123,14 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> imp
         //******描述和标题*******
         String title=cardItemEntity.getTitle_card();
         if(title.equals("")){
-            myHolder.title_card.setText(context.getString(R.string.card_NoTitle_Eng));
+            myHolder.title_card.setText(context.getString(R.string.card_NoTitle));
         }else {
             myHolder.title_card.setText(title);
         }
 //        myHolder.title_card.setText(cardItemEntity.getTitle_card());
         String text=cardItemEntity.getText_card();
         if(text.equals("")){
-            myHolder.text_card.setText(context.getString(R.string.card_NoInfo_Eng));
+            myHolder.text_card.setText(context.getString(R.string.card_NoInfo));
         }else {
             myHolder.text_card.setText(text);
         }
@@ -182,7 +182,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> imp
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder alertBuilder=new AlertDialog.Builder(context);
-                String msg= context.getString(R.string.deletePopup_Eng);
+                String msg= context.getString(R.string.deletePopup);
                 if(!cardItemEntity.getTitle_card().equals("")){
                     msg+="\n\n" +"🖼️ "+String.valueOf(cardItemEntity.getTitle_card());
                 }else {

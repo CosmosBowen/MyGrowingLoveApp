@@ -1,5 +1,7 @@
 package com.example.lbwapp;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -56,8 +58,9 @@ public class Countries {
         for(String[] eachInfo:AllInfo_CodeLocationName){
             for(int i=2;i<eachInfo.length;i++){
                 if(eachInfo[i].equals(countryName)){
-//                    correctCountry=eachInfo[3];//中文版本
-                    correctCountry=eachInfo[2];//英文版本
+//                    String version=R.string.countryNameVersion;
+                    correctCountry=eachInfo[3];//中文版本
+//                    correctCountry=eachInfo[2];//英文版本
                     return correctCountry;
                 }
             }

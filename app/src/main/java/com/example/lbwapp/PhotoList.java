@@ -17,8 +17,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -37,8 +39,11 @@ public class PhotoList extends Activity {
     public static final String VISIT = "visit";
     public static final String EMPTY = "empty";
 
-    LinearLayout photoList_welcomingText;
+    FrameLayout photoList_welcoming;
+    LinearLayout photoList_welcoming_logo;
+    MyTextView photoList_welcoming_text;
     List<CardItemEntity> cardList;
+    boolean isShowLogo=true;
 //    String list_position="";
     MyAdapter myAdpater;
     RecyclerView recyclerView;
@@ -61,7 +66,23 @@ public class PhotoList extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo_list);
 
-        photoList_welcomingText=findViewById(R.id.photoList_welcomingText);
+        photoList_welcoming=findViewById(R.id.photoList_welcoming);
+        photoList_welcoming_logo=findViewById(R.id.photoList_welcoming_logo);
+        photoList_welcoming_text=findViewById(R.id.photoList_welcoming_text);
+        photoList_welcoming.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isShowLogo){
+                    photoList_welcoming_logo.setVisibility(View.INVISIBLE);
+                    photoList_welcoming_text.setVisibility(View.VISIBLE);
+                }else {
+                    photoList_welcoming_logo.setVisibility(View.VISIBLE);
+                    photoList_welcoming_text.setVisibility(View.INVISIBLE);
+                }
+                isShowLogo=!isShowLogo;
+            }
+        });
+
         recyclerView = findViewById(R.id.recycler_view);
 
 
@@ -121,19 +142,38 @@ public class PhotoList extends Activity {
 //        }
 //        cursor.close();
 
+        CardView cardViewAddPhotos=findViewById(R.id.btn_addPhoto);
+        cardViewAddPhotos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(PhotoList.this,TakePhotos.class);
+                startActivity(intent);
+            }
+        });
+        CardView cardViewClassifiedPhotos=findViewById(R.id.btn_classifiedPhotos);
+        cardViewClassifiedPhotos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(PhotoList.this, "yeah", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(PhotoList.this,Sort.class);
+                startActivity(intent);
+            }
+        });
 
         boolean isNoCard=getCardData();
-        Toast.makeText(this,"isNoCard: "+isNoCard,Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"isNoCard: "+isNoCard,Toast.LENGTH_SHORT).show();
         if(isNoCard){
             //显示文字
 //            replaceFragment(new PhotoList_TextView());
-            photoList_welcomingText.setVisibility(View.VISIBLE);
+            photoList_welcoming.setVisibility(View.VISIBLE);
             recyclerView.setVisibility(View.INVISIBLE);
+            cardViewClassifiedPhotos.setVisibility(View.INVISIBLE);
         }else {
             //显示图片列表
 //            replaceFragment(new PhotoList_RecyclerView());
-            photoList_welcomingText.setVisibility(View.INVISIBLE);
+            photoList_welcoming.setVisibility(View.INVISIBLE);
             recyclerView.setVisibility(View.VISIBLE);
+            cardViewClassifiedPhotos.setVisibility(View.VISIBLE);
             myAdpater = new MyAdapter(this, cardList);
             myAdpater.setStateRestorationPolicy(RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY);
             //new LinearLayoutManager() 参数为上下文环境，实现的是默认的垂直布局
@@ -187,23 +227,7 @@ public class PhotoList extends Activity {
         }
 
 
-        CardView cardViewAddPhotos=findViewById(R.id.btn_addPhoto);
-        cardViewAddPhotos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(PhotoList.this,TakePhotos.class);
-                startActivity(intent);
-            }
-        });
-        CardView cardViewClassifiedPhotos=findViewById(R.id.btn_classifiedPhotos);
-        cardViewClassifiedPhotos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Toast.makeText(PhotoList.this, "yeah", Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(PhotoList.this,Sort.class);
-                startActivity(intent);
-            }
-        });
+
 
 
 // ***********************For test**************************
@@ -356,7 +380,7 @@ public class PhotoList extends Activity {
 
     private void exit() {
         if((System.currentTimeMillis()-exitTime)>2000){
-            Toast.makeText(PhotoList.this,getString(R.string.exitApp_Eng),Toast.LENGTH_SHORT).show();
+            Toast.makeText(PhotoList.this,getString(R.string.exitApp),Toast.LENGTH_SHORT).show();
             //更新上一次点击返回键的时间
             exitTime=System.currentTimeMillis();
         }else {

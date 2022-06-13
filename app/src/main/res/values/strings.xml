@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">GrowingLove</string>
-    <string name="app_name_Chi">成长相册</string>
+    <string name="app_name">成长相册</string>
+    <string name="app_name_Chi">GrowingLove</string>
     <string name="empty">empty</string>
     <string name="add">+</string>
     <string name="CardIcon_Label">🍭  </string>
@@ -8,8 +8,8 @@
     <string name="home">家庭日记</string>
     <string name="visit">探亲</string>
 
-    <string name="card_NoTitle_Chi">[无标题]</string>
-    <string name="card_NoInfo_Chi">[无描述]</string>
+    <string name="card_NoTitle">[无标题]</string>
+    <string name="card_NoInfo">[无描述]</string>
     <string name="card_NoTitle_Eng">[no title]</string>
     <string name="card_NoInfo_Eng">[no description]</string>
 
@@ -23,13 +23,16 @@
     <string name="defaultTitle_Eng">Title</string>
     <string name="defaultDescription_Eng">Description</string>
 
-    <string name="exitApp_Chi">再按一次退出程序</string>
+    <string name="exitApp">再按一次退出程序</string>
     <string name="exitApp_Eng">gonna exit app when click again</string>
 
-    <string name="deletePopup_Chi">真的要删掉吗?</string>
+    <string name="countryNameVersion">3</string>
+    <string name="countryNameVersion_Eng">2</string>
+
+    <string name="deletePopup">真的要删掉吗?</string>
     <string name="deletePopup_Eng">Really wanna delete it ?</string>
 
-    <string name="editCalendarPopup_Chi">不允许编辑</string>
+    <string name="editCalendarPopup">不允许编辑</string>
     <string name="editCalendarPopup_Eng">❌ Not allowed to edit</string>
 
     <string name="loveEnding">冷博雯制作\n送给我亲爱的妹妹\n小丫丫🐣\n\nCopyright @ JoanneLeng</string>

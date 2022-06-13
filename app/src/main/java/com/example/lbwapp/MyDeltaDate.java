@@ -169,7 +169,6 @@ public class MyDeltaDate {
 
         String showText="";
         // Chinese version
-        /*
         if(deltaYears>0){
             showText=deltaYears+"年前";
         }else if (deltaMonths>0){
@@ -180,9 +179,17 @@ public class MyDeltaDate {
             showText="今天";
         }
         return showText;
-
-         */
 //        return showText+"\n间隔:"+"\n(年) "+deltaYears+"\n(月) "+deltaMonths+"\n(日) "+deltaDays;
+
+    }
+
+    /*
+    private static String getDaysTextFromMyDeltaDate(int[] myDeltaDate) {
+        int deltaYears = myDeltaDate[0];
+        int deltaMonths = myDeltaDate[1];
+        int deltaDays = myDeltaDate[2];
+
+        String showText = "";
 
         // English version,以前是需要myDeltaDate.deltaYears，myDeltaDate.deltaMonths，myDeltaDate.deltaDays
         if(deltaYears>0){
@@ -208,6 +215,7 @@ public class MyDeltaDate {
         }
         return showText;
 //        return showText+"\nin between:"+"\n(years)  "+deltaYears+"\n(months) "+deltaMonths+"\n(days)   "+deltaDays;
-
     }
+
+     */
 }

@@ -205,7 +205,7 @@ public class ChoosePhotoPortrait extends Activity {
         String latitudeValue=exifInterface.getAttribute(ExifInterface.TAG_GPS_LATITUDE);
         String longitudeValue=exifInterface.getAttribute(ExifInterface.TAG_GPS_LONGITUDE);
         if(latitudeValue==null||longitudeValue==null){//无经纬度
-            Toast.makeText(this,"无经纬度",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this,"无经纬度",Toast.LENGTH_SHORT).show();
 //            text=" , , ";
         }else {
             //否则,有经纬信息
@@ -236,12 +236,12 @@ public class ChoosePhotoPortrait extends Activity {
                     sb.append(FeatureName.equals("null")?" ":FeatureName);
                     text=sb.toString();
                 }else {
-                    Toast.makeText(this,"有经纬信息，但未获得地点信息",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"有经纬信息，但未获得地点信息",Toast.LENGTH_SHORT).show();
                 }
 
             }catch (IOException e){
                 e.printStackTrace();
-                Toast.makeText(this,"无法通过经纬信息获得地点信息",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this,"无法通过经纬信息获得地点信息",Toast.LENGTH_SHORT).show();
 //            text=" , , ";//无法通过经纬信息获得地点信息
             }
         }

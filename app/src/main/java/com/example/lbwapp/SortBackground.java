@@ -245,10 +245,10 @@ public class SortBackground extends Fragment {
 //        eachTagCollectionList=new ArrayList<>();
         eachTagCollectionList=new LinkedHashMap<>();
 
-        String oneWeek=getString(R.string.oneWeek_Eng);
-        String oneMonth=getString(R.string.oneMonth_Eng);
-        String oneYear=getString(R.string.oneYear_Eng);
-        String overOneYear=getString(R.string.overOneYear_Eng);
+        String oneWeek=getString(R.string.oneWeek);
+        String oneMonth=getString(R.string.oneMonth);
+        String oneYear=getString(R.string.oneYear);
+        String overOneYear=getString(R.string.overOneYear);
         if(oneWeekAgoGroup.size()!=0){
             tagList.add(oneWeek);
             eachTagCollectionList.put(oneWeek,oneWeekAgoGroup);
