@@ -35,8 +35,8 @@
     <string name="editCalendarPopup">不允许编辑</string>
     <string name="editCalendarPopup_Eng">❌ Not allowed to edit</string>
 
-    <string name="loveEnding">冷博雯制作\n送给我亲爱的妹妹\n小丫丫🐣\n\nCopyright @ JoanneLeng</string>
-    <string name="loveEnding_Eng">Created By Bowen\nFor My Dear Sister\nLittle YaYa🐣\n\nCopyright @ JoanneLeng</string>
+    <string name="loveEnding">冷博雯制作\n送给我亲爱的妹妹\n小丫丫\n🐣\nCopyright\n@JoanneLeng</string>
+    <string name="loveEnding_Eng">Created By Bowen\nFor My Dear Sister\nLittle YaYa\n🐣\nCopyright\n@JoanneLeng</string>
     <string name="title_activity_calendar_test">calendarTest</string>
 
     <string name="oneWeek">一周</string>
